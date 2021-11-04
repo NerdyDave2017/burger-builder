@@ -1,7 +1,6 @@
 .BuildControls {
   width: 100%;
   height: auto;
-
   background-color: #cf8f2e;
   display: flex;
   flex-flow: column;
@@ -54,5 +53,12 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .BuildControls {
+    position: absolute;
+    bottom: 0;
   }
 }
