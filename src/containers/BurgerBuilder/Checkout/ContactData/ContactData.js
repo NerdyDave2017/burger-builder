@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "../../../../axios-orders";
 
+import { checkValidity } from "../../../../store/utility";
+
 //Redux imports
 import { connect } from "react-redux";
 import { purchaseBurger } from "../../../../store/actions/order.action";
@@ -120,38 +122,6 @@ class ContactData extends Component {
     this.props.onOrderBurger(order, this.props.token);
   };
 
-  checkValidity(value, rules) {
-    let isValid = true;
-    if (!rules) {
-      return true;
-    }
-
-    if (rules.required) {
-      isValid = value.trim() !== "" && isValid;
-    }
-
-    if (rules.minLength) {
-      isValid = value.trim().length >= rules.minLength && isValid;
-    }
-
-    if (rules.maxLength) {
-      isValid = value.trim().length <= rules.maxLength && isValid;
-    }
-
-    if (rules.isEmail) {
-      const pattern =
-        /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
-      isValid = pattern.test(value) && isValid;
-    }
-
-    if (rules.isNumeric) {
-      const pattern = /^\d+$/;
-      isValid = pattern.test(value) && isValid;
-    }
-
-    return isValid;
-  }
-
   inputChangedHandler = (event, inputIdentifier) => {
     // get a copy of the first level
     const updatedOrderForm = {
@@ -165,7 +135,7 @@ class ContactData extends Component {
 
     // Now we can safely change the value of the updatedFormElement because it is a clone
     updatedFormElement.value = event.target.value;
-    updatedFormElement.valid = this.checkValidity(
+    updatedFormElement.valid = checkValidity(
       updatedFormElement.value,
       updatedFormElement.validation
     );

@@ -1,0 +1,21 @@
+[debug] [2021-11-08T23:41:40.412Z] ----------------------------------------------------------------------
+[debug] [2021-11-08T23:41:40.421Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\USER\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-11-08T23:41:40.422Z] CLI Version:   9.22.0
+[debug] [2021-11-08T23:41:40.422Z] Platform:      win32
+[debug] [2021-11-08T23:41:40.422Z] Node Version:  v12.18.3
+[debug] [2021-11-08T23:41:40.431Z] Time:          Tue Nov 09 2021 00:41:40 GMT+0100 (West Africa Standard Time)
+[debug] [2021-11-08T23:41:40.432Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-11-08T23:41:40.491Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-11-08T23:41:40.492Z] > authorizing via signed-in user (ajayioluwasegun2018@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\USER\Documents\ReactJs Tutorial\burger-builder
+
